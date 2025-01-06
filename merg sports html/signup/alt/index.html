@@ -1,0 +1,70 @@
+<!--{% load static %}-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MERG</title>
+        <link rel="stylesheet" href="{% static 'signup/css/style.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+
+<body id="app">
+    <header>
+        <a href="index.html"><img src="{% static 'signup/images/MERG Pillow.png' %}" alt=""></a>
+        <a href="profile.html"><img class="profile" src="{% static 'signup/images/profile_icon.png' %}" alt=""></a>
+    </header>
+    <main>
+        <div class="try">
+            <h1>Account erstellen</h1>
+            <p>Schon registriert? <a href="">Login</a></p>
+            <form action="" method="POST">{% csrf_token %}
+                <div class="daten">
+                
+                        <h2>Benutzername</h2>
+                        <input type="text" name="username">
+                        <h2>EMail</h2>
+                        <input type="email" name="email">
+                        <h2>Passwort</h2>
+                        <input type="password" name="password">
+                        <h2>Passwort</h2>
+                        <input type="password">
+                        <h2>Geburtsdatum</h2>
+                        <input class="date" type="date" name="birthday">
+                    
+                </div>
+                <div class="container">
+                    <div class="sport">
+                        <h3>Laufen</h3> <input type="checkbox" name="laufen" id="">
+                    </div>
+                    <div class="sport">
+                        <h3>Gewichtheben</h3> <input type="checkbox" name="gewichtheben" id="">
+                    </div>
+                    <div class="sport">
+                        <h3>Schwimmen</h3> <input type="checkbox" name="schwimmen" id="">
+                    </div>
+                    <div class="sport">
+                        <h3>Fahrradfahren</h3> <input type="checkbox" name="fahrradfahren" id="">
+                    </div>
+                    <div class="sport">
+                        <h3>Wandern</h3> <input type="checkbox" name="wandern" id="">               
+                    </div>
+                </div>
+                <input class="button" type="submit" value="Registrieren">
+            </form>
+        </div>
+        <footer>
+            <div>
+                <a href="">Impressum</a>
+                <p>|</p>
+                <a href="">Datenschutz</a>
+                <p>|</p>
+                <a href="">Hinweise zu Cookies</a>
+            </div>
+        </footer>
+    </main>
+
+</body>
+</html>

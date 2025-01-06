@@ -1,0 +1,356 @@
+* {
+    font-family: "Roboto Mono";
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+body {
+    margin: 0px;
+}
+
+h1,h2 {
+    text-transform: uppercase;
+    font-family: "roboto mono";
+}
+
+button {
+    text-transform: uppercase;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: sticky;
+    position: -webkit-sticky;
+    z-index: 1;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    height: auto;
+    justify-content: flex-end;
+    background-color: black;
+    font-size: 20px;
+    z-index: 1;
+}
+
+nav a:link, nav a:visited {
+    color: azure;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+a {
+    padding: 10px;
+}
+
+header > nav > a {
+    display: grid;
+}
+
+header > nav > a > img {
+    max-height: 2.5rem;
+    padding: 0;
+    margin: 0 5px;
+    align-self:flex-start;
+}
+
+
+.hero {
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    grid-template-rows: 50% 50%;
+    background-color: #f57449;
+    height: 97vh;
+}
+
+.hero img {
+    grid-area: 1/1/3/1;
+    max-width: 100%;
+    object-fit: cover;
+    height: 97vh;
+}
+.hero .level {
+    grid-area: 1/2/3/2;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    -o-transform:rotate(180deg);
+    -ms-transform:rotate(180deg);
+    font-size: 12vw;
+    font-weight: bold;
+    text-align: end;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+    animation: slidein-top 7s;
+}
+
+.up {
+    display: flex;
+    grid-area: 1/3/3/3;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    -o-transform:rotate(180deg);
+    -ms-transform:rotate(180deg);
+    font-size: 12vw;
+    font-weight: bold;
+    text-align: end;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 2rem;
+    animation: slidein-top 7s;
+}
+
+.hero .connect {
+    grid-area: 2/3/3/4;
+    font-size: 2vw;
+    animation: slidein-right 7s;
+}
+
+@keyframes slidein-top {
+    0% {margin-top: -800px;}
+    20% { margin-top:-800px; }
+    35% { margin-top:0px; }
+    100% { margin-top:0px; }
+}
+
+@keyframes slidein-right {
+    0% {margin-right: 1000;}
+    100% {margin-right: 0;}
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--main-text-color); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+::-webkit-scrollbar-track {
+    background: #363434;
+}
+
+
+.best {
+    background-image: linear-gradient(to right, #A4C1FF, #FFF);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 25% 55%;
+    grid-template-rows: auto;
+    gap: 20px;
+    column-gap: 20%;
+    padding: 40px;
+}
+
+#members {
+    background-color: black;
+    color: azure;
+}
+
+#members:hover {
+    background-color: azure;
+    color: black;
+}
+
+button {
+    background-color: #f57449;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: none;
+    border-style: solid;
+    border-width: 3px;
+    font-weight: bold;
+    font-size: 3vh;
+    width: 35vh;
+    padding: 5px;
+    transition-duration: 0.6s;
+}
+
+button > a {
+    text-decoration: none;
+    color: #000;
+}
+
+.best button:hover {
+    background-color: #ff5d27;
+}
+
+.best .grid1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.best .grid2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.best .grid3 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.best .grid4 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.best .grid5 {
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+
+#features {
+    background-color: #FF916C;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 40% 10% 40%;
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+#features .grid1 {
+    grid-area: 1/1/3/2;
+}
+#features h2 {
+    font-size: 5vw;
+    margin-top: 10px;
+}
+
+#features .grid2 {
+    grid-area: 2/1/3/2;
+}
+
+#features .grid3 {
+    grid-area: 1/2/2/3;
+}
+
+#features .grid4 {
+    grid-area: 1/3/2/4;
+}
+
+#features .grid5 {
+    grid-area: 2/2/3/3;
+}
+
+#features .grid6 {
+    grid-area: 2/3/3/4;
+}
+
+#features .grid7 {
+    grid-area: 3/2/4/3;
+}
+
+#features .grid8 {
+    grid-area: 3/3/4/4;
+}
+
+#features h3 {
+    background-color: azure;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: fit-content;
+}
+
+.level {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.eins {
+    padding: 2rem;
+}
+
+.people {
+    display: grid;
+    grid-template-columns: auto 30% auto;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    padding: 20px;
+    background-color: azure;
+    justify-content: center;
+}
+
+.people h2 {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    grid-area: 1/1/3/2;
+    font-size: 5vw;
+}
+
+.people .grid2 {
+    grid-area: 2/2/3/3;
+}
+
+.people button {
+    width: fit-content;
+}
+
+.people img {
+    grid-area: 1/3/3/4;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    align-self: center;
+}
+
+#reviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 2rem;
+    background-color: rgb(46, 44, 44);
+    color: azure;
+}
+
+
+#reviews {
+    font-family: "Lora";
+}
+
+.quoteA {
+    grid-area: 1/1/1/4;
+}
+
+.quoteB {
+    grid-area: 3/3/3/3;
+    justify-self: end;
+}
+
+footer {
+    background-image: url(../images/contact.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 25rem;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+#contact {
+    grid-column: 2 / 2;
+    background-color: rgba(240, 248, 255, 0.164);
+}

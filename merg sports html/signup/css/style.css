@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+}
+  
+#app {
+    height: 100vh;
+
+    /* grid container settings */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem auto;
+    grid-template-areas: 
+        'header'
+        'main';
+    background-color: #fefefe;
+    font-family: "Public Sans";
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: var(--main-text-color); 
+}
+    
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+  
+
+#app > header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #f57449;
+    align-items: center;
+    height: 3rem;
+}
+
+#app > header a {
+    display: grid;
+}
+
+#app > header img {
+    max-height: 2.5rem;
+    padding: 0;
+    margin: 0 5px;
+}
+
+#app > header .profile {
+    align-self: center;
+    justify-self: end;
+}
+
+
+.try {
+    grid-column: 2 / 3;
+    grid-template-rows: minmax(90px,auto) minmax(50px,90px) minmax(auto,350px) minmax(auto,250px) auto;
+    justify-content: center;
+    display: grid;
+    justify-items: center;
+}
+
+#app > main {
+    grid-area: main;
+    overflow: auto;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr minmax(0,400px) 1fr;
+}
+
+
+.daten {
+    font-size: 0.6rem;
+    justify-self: center;
+}
+
+.date {
+    width: 172px;
+}
+
+#app > main .container {
+    margin: 1.5rem;
+}
+
+
+#app > main .sport {
+    font-size: 0.9rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    line-height: 50%;
+}
+
+h1 {
+    align-content: end;
+    margin: 0;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+.button {
+    background-color: #f57449;
+    color: #fefefe;
+    border: 1px solid black;
+    padding: 5px 15px;
+    font-size: 1rem;
+    transition-duration: 0.4s;
+    font-weight: bold;
+    margin: 1rem 0 2rem 0;
+    max-height: 2.5rem;
+    align-content: start;
+}
+
+.button:hover{
+    background-color: #fefefe;
+    color: #f57449;
+    cursor: pointer;
+}
+
+
+#app > main > footer {
+    background-color: #7a7a7c;
+    color:#fefefe;
+    grid-column: 1 / 4;
+    font-size: 0.8rem;
+    line-height: 10%;
+}
+
+
+#app > main > footer > div a {
+    color:#fefefe;
+    padding: 0 0.5rem;
+}
+
+#app > main > footer > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
